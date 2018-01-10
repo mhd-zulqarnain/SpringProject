@@ -1,6 +1,8 @@
 package com.example.mysqdemo.controller;
 
+import com.example.mysqdemo.model.Todo;
 import com.example.mysqdemo.model.Users;
+import com.example.mysqdemo.repository.TaskRepository;
 import com.example.mysqdemo.repository.UserRepository;
 import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,8 @@ public class UserResource {
 
     @Autowired
     UserRepository userRepository;
+    TaskRepository dosRepository;
+
     @GetMapping(value = "/all")
     public List<Users> getAll(){
         return userRepository.findAll();
@@ -31,5 +35,15 @@ public class UserResource {
     @GetMapping(value = "user/{name}")  /// http://localhost:8080/rest/user/ali
     public Users getUser(@PathVariable(name="name")String name){
         return userRepository.findByName(name);
+    }
+
+    @PostMapping(value = "newDo")
+    public List<Todo> newTask(@RequestBody Todo dos){
+        dosRepository.save(dos);
+        return dosRepository.findAll();
+    }
+    @GetMapping(value = "/allTask")
+    public List<Todo> getAlltasks(){
+        return dosRepository.findAll();
     }
 }
