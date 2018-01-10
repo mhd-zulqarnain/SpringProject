@@ -1,0 +1,4 @@
+FROM openjdk:8
+ADD target/BookingDemo-0.0.1-SNAPSHOT.jar BookingDemo-0.0.1-SNAPSHOT.jar
+EXPOSE 8085
+ENTRYPOINT ["java","-jar","BookingDemo-0.0.1-SNAPSHOT.jar"]
