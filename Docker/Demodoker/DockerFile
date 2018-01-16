@@ -1,0 +1,4 @@
+FROM openjdk:8
+ADD target/spring-boot-pc.jar spring-boot-pc.jar
+EXPOSE 8085
+CMD ["java","-jar","spring-boot-pc.jar"]

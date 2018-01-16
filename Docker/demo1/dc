@@ -1,0 +1,11 @@
+[33mcommit 1b812b8b01ba3b998fc035d8aca3649592f8ef72[m[33m ([m[1;36mHEAD -> [m[1;32mherouku-deploy[m[33m, [m[1;31morigin/herouku-deploy[m[33m)[m
+Author: xlualy <zuluparvi@gmail.com>
+Date:   Sun Jan 7 15:43:26 2018 +0500
+
+    testing docker deployment
+
+[33mcommit 217518774bfb4be962e93450a8bae5e9b236aa92[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: xlualy <zuluparvi@gmail.com>
+Date:   Wed Jan 3 17:02:41 2018 +0500
+
+    first commit
