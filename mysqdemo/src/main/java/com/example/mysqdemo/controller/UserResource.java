@@ -23,6 +23,7 @@ public class UserResource {
 
     @GetMapping(value = "/all")
     public List<Users> getAll(){
+
         return userRepository.findAll();
     }
 
@@ -45,5 +46,9 @@ public class UserResource {
     @GetMapping(value = "/allTask")
     public List<Todo> getAlltasks(){
         return dosRepository.findAll();
+    }
+    @GetMapping(name="id/{uid}")
+    public Todo getDo(@PathVariable(name = "uid") int uid) {
+        return dosRepository.findByUid(uid);
     }
 }

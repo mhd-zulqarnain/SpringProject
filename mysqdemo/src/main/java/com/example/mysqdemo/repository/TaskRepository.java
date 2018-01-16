@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface TaskRepository  extends JpaRepository<Todo,Integer>{
-    void findByUid(int id);
+    Todo findByUid(int id);
 }
