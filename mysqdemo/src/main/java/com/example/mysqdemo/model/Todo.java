@@ -1,6 +1,5 @@
 package com.example.mysqdemo.model;
 
-import com.sun.javafx.beans.IDProperty;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
