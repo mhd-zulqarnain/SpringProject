@@ -10,7 +10,7 @@ import javax.persistence.Id;
  * Created by Zul Qarnain on 1/10/2018.
  */
 @Entity
-public class Todo {
+public class Tasks {
 
     @Id
     @GeneratedValue
@@ -23,7 +23,7 @@ public class Todo {
     @Column(name = "des")
     private String des;
 
-    public Todo() {
+    public Tasks() {
     }
 
     public int getId() {

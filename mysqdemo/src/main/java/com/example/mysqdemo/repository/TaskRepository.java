@@ -1,13 +1,14 @@
 package com.example.mysqdemo.repository;
 
-import com.example.mysqdemo.model.Todo;
+import com.example.mysqdemo.model.Tasks;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+
+import javax.transaction.Transactional;
 
 /**
  * Created by Zul Qarnain on 1/10/2018.
  */
-@Repository
-public interface TaskRepository  extends JpaRepository<Todo,Integer>{
-    Todo findByUid(int id);
+@Transactional
+public interface TaskRepository  extends JpaRepository<Tasks,Integer>{
+
 }
